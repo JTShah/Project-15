@@ -2,6 +2,7 @@ var path,boy,cash,diamonds,jewelry,sword;
 var pathImg,boyImg,cashImg,diamondsImg,jewelryImg,swordImg;
 var treasureCollection = 0;
 var cashG,diamondsG,jewelryG,swordGroup;
+var over
 
 //Game States
 var PLAY=1;
@@ -143,4 +144,11 @@ function createSword(){
   sword.lifetime = 150;
   swordGroup.add(sword);
   }
+}
+
+if(swordGroup.isTouching(boy)) {
+  gamestate=0;
+  over.addImage(endImg);
+
+
 }
