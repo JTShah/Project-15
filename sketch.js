@@ -148,7 +148,7 @@ function createSword(){
 
 if(swordGroup.isTouching(boy)) {
   gamestate=0;
-  over.addImage(endImg);
+  boy.addAnimation("SahilRunning",endImg);
 
 
 }
