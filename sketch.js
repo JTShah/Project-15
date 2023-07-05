@@ -92,6 +92,12 @@ function draw() {
         swordGroup.setVelocityYEach(0);
      
     }
+    if(swordGroup.isTouching(boy)) {
+      gamestate=0;
+      boy.addAnimation("SahilRunning",endImg);
+    
+    
+    }
   }
   
   drawSprites();
@@ -146,9 +152,4 @@ function createSword(){
   }
 }
 
-if(swordGroup.isTouching(boy)) {
-  gamestate=0;
-  boy.addAnimation("SahilRunning",endImg);
 
-
-}
