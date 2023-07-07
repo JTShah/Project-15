@@ -2,7 +2,7 @@ var path,boy,cash,diamonds,jewelry,sword;
 var pathImg,boyImg,cashImg,diamondsImg,jewelryImg,swordImg;
 var treasureCollection = 0;
 var cashG,diamondsG,jewelryG,swordGroup;
-var over
+var endImg;
 
 //Game States
 var PLAY=1;
@@ -32,6 +32,10 @@ path.velocityY = 4;
 boy = createSprite(70,580,20,20);
 boy.addAnimation("SahilRunning",boyImg);
 boy.scale=0.08;
+
+//boy.addAnimation("SahilEnd",endImg);
+
+
   
   
 cashG=new Group();
@@ -75,7 +79,7 @@ function draw() {
     }else{
       if(swordGroup.isTouching(boy)) {
         gameState=END;
-        boy.addAnimation(endImg);
+        boy.addAnimation("SahilRunning", endImg);
 
         boy.x=200;
         boy.y=300;
@@ -91,12 +95,6 @@ function draw() {
         jewelryG.setVelocityYEach(0);
         swordGroup.setVelocityYEach(0);
      
-    }
-    if(swordGroup.isTouching(boy)) {
-      gamestate=0;
-      boy.addAnimation("SahilRunning",endImg);
-    
-    
     }
   }
   
